@@ -1,7 +1,7 @@
 ---
 title: "GSoC 2021 Updates"
 date: 2021-06-14T12:39:08+05:30
-draft: true
+draft: false
 ---
 
 Weekly reports of my GSoC progress on this page
