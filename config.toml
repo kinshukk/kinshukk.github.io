@@ -22,7 +22,7 @@ defaultContentLanguageInSubdir = false
 pluralizeListTitles = false
 
 # The length of text in words to show in summary
-summaryLength = 140
+summaryLength = 100
 
 # Enable Emoji emoticons support?
 enableEmoji = true
@@ -96,12 +96,9 @@ uglyURLs = false
     # Name
     name = "Kinshuk Kashyap"
     # Email
-    email = "kinshukkashyap [dot] me [at] gmail [dot] com"
-    # Motto or introduction
-    motto = "Win and help win"
+    email = "kinshukkashyap.me@gnail.com"
     # Avatar
     avatar = "/icons/apple-touch-icon.png"
-    # Personal website, default: baseURL
     # Twitter
     twitter = "kashyap_kinshuk"
 
@@ -140,9 +137,17 @@ uglyURLs = false
     mediaType = "application/json"
     baseName = "search"
 
+# Search index for Algolia
+[outputFormats.Algolia]
+    mediaType = "application/json"
+    baseName = "algolia"
+    isPlainText = true
+    notAlternative = true
+
 # Hugo’s output control
 [outputs]
     page = ["HTML"]
+    # home = ["HTML", "SectionsAtom", "SectionsRSS", "SearchIndex", "Algolia"]
     home = ["HTML", "SectionsAtom", "SectionsRSS", "SearchIndex"]
     section = ["HTML"]
     taxonomy = ["HTML"]
@@ -202,18 +207,18 @@ uglyURLs = false
         weight = 2
         pre = "internal"
         post = "archive"
-    [[menu.main]]
-        url = "/categories/"
-        name = "Categories"
-        weight = 3
-        pre = "internal"
-        post = "th"
-    [[menu.main]]
-        url = "/tags/"
-        name = "Tags"
-        weight = 4
-        pre = "internal"
-        post = "tags"
+    # [[menu.main]]
+    #     url = "/categories/"
+    #     name = "Categories"
+    #     weight = 3
+    #     pre = "internal"
+    #     post = "th"
+    # [[menu.main]]
+    #     url = "/tags/"
+    #     name = "Tags"
+    #     weight = 4
+    #     pre = "internal"
+    #     post = "tags"
     [[menu.main]]
         url = "/about/"
         name = "About"
@@ -223,10 +228,13 @@ uglyURLs = false
     [[menu.main]]
         weight = 6
         identifier = "theme-switcher"
-    [[menu.main]]
-        weight = 8
-        identifier = "search"
-        post = "search"
+    # [[menu.main]]
+    #     weight = 7
+    #     identifier = "lang-switcher"
+    # [[menu.main]]
+    #     weight = 8
+    #     identifier = "search"
+    #     post = "search"
 
 
 
@@ -337,15 +345,15 @@ uglyURLs = false
     siteLogo = "/icons/apple-touch-icon.png"
     # Note: used for JSON-LD, Open Graph
 
-    siteDescription = "MemE is a powerful and highly customizable GoHugo theme for personal blogs."
+    siteDescription = "Playing :)"
     # Note: used for HTML head meta, JSON-LD,
     #       Open Graph, Atom, RSS
 
-    siteCreatedTime = "1969-07-20T20:17:43+00:00"
+    siteCreatedTime = "2021-06-12T16:00:00+05:30"
     # ATTENTION: keep this format, change
     #            the number
 
-    siteTwitter = "reuixiy"
+    siteTwitter = "kashyap_kinshuk"
     # Note: used for Twitter Cards
 
 
@@ -1136,9 +1144,9 @@ uglyURLs = false
     ######################################
     # Post Share
 
-    enablePostShare = true
+    enablePostShare = false
 
-    displayPostShare = true
+    displayPostShare = false
     # Note: *global settings*
     #       `share` in post’s Front Matter
     #       has a higher priority than here
@@ -1240,17 +1248,17 @@ uglyURLs = false
 
     displayCopyrightSymbol = true
 
-    displaySiteCreatedYear = true
+    displaySiteCreatedYear = false
 
     # Leave it empty("") if you don’t want
     # the icon
-    iconBetweenYearAndAuthor = "heart"
+    iconBetweenYearAndAuthor = ""
     iconColor = "#f06292"
     # Enable heartbeat animation?
-    iconAnimation = true
+    iconAnimation = false
 
     # Display links to Hugo and MemE?
-    displayPoweredBy = true
+    displayPoweredBy = false
 
     displaySiteCopyright = true
 
@@ -1356,10 +1364,28 @@ uglyURLs = false
     # Lunr search
 
     # Note: This requires SearchIndex
-    # output to be enabled.
+    #       output to be enabled.
 
     enableLunrSearch = true
     # Note: https://lunrjs.com/
+
+
+    ######################################
+    # Algolia search
+
+    # Note: This requires Algolia
+    #       output to be enabled.
+    #       And you need to upload the
+    #       generated algolia.json to
+    #       Algolia every time you rebuild
+    #       your site.
+
+    enableAlgoliaSearch = false
+
+    algoliaAppId = ""
+    algoliaApiKey = ""
+    algoliaIndexName = ""
+    # Note: https://www.algolia.com/
 
 
     ######################################
