@@ -43,7 +43,7 @@ paginate = 5
 
 # URL related
 disablePathToLower = false
-relativeURLs = false
+relativeURLs = true
 uglyURLs = false
 
 # URL structure
@@ -1168,9 +1168,9 @@ uglyURLs = false
     ######################################
     # Related Posts
 
-    enableRelatedPosts = true
+    enableRelatedPosts = false
 
-    displayRelatedPosts = true
+    displayRelatedPosts = false
     # Note: *global settings*
     #       `related` in post’s Front Matter
     #       has a higher priority than here
