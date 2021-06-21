@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Kinshuk's Place</title><link>https://kinshukk.github.io/</link><description>Playing :)</description><generator>Hugo 0.83.1 https://gohugo.io/</generator><language>en</language><managingEditor>kinshukkashyap.me@gnail.com (Kinshuk Kashyap)</managingEditor><webMaster>kinshukkashyap.me@gnail.com (Kinshuk Kashyap)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright><lastBuildDate>Mon, 14 Jun 2021 11:04:27 +0000</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://kinshukk.github.io/rss.xml"/><item><title>GSoC 2021 Updates</title><link>https://kinshukk.github.io/posts/gsoc-2021-updates/</link><guid isPermaLink="true">https://kinshukk.github.io/posts/gsoc-2021-updates/</guid><pubDate>Mon, 14 Jun 2021 12:39:08 +0530</pubDate><author>kinshukkashyap.me@gnail.com (Kinshuk Kashyap)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright><description>&lt;p>Weekly reports of my Google Summer of Code 2021 work.&lt;/p>
+<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Kinshuk's Place</title><link>https://kinshukk.github.io/</link><description>Playing :)</description><generator>Hugo 0.84.0 https://gohugo.io/</generator><language>en</language><managingEditor>kinshukkashyap.me@gnail.com (Kinshuk Kashyap)</managingEditor><webMaster>kinshukkashyap.me@gnail.com (Kinshuk Kashyap)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright><lastBuildDate>Mon, 21 Jun 2021 17:38:43 +0000</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://kinshukk.github.io/rss.xml"/><item><title>GSoC 2021 Updates</title><link>https://kinshukk.github.io/posts/gsoc-2021-updates/</link><guid isPermaLink="true">https://kinshukk.github.io/posts/gsoc-2021-updates/</guid><pubDate>Mon, 14 Jun 2021 12:39:08 +0530</pubDate><author>kinshukkashyap.me@gnail.com (Kinshuk Kashyap)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright><description>&lt;p>Weekly reports of my Google Summer of Code 2021 work.&lt;/p>
 &lt;h1 id="weeks-1-3-17-may-to-06-jun">weeks 1-3 (17 May to 06 Jun)&lt;/h1>
 &lt;h3 id="things-done">Things done&lt;/h3>
 &lt;ul>
@@ -24,6 +24,23 @@
 &lt;li>Attend OHBM Brainhack and interact with the larger community of neuroscientists and datalad users.&lt;/li>
 &lt;/ul>
 &lt;h3 id="issues-blocking-progress-1">Issues blocking progress&lt;/h3>
+&lt;ul>
+&lt;li>None&lt;/li>
+&lt;/ul>
+&lt;hr>
+&lt;h1 id="week-5-14-jun-to-20-jun">week 5 (14 Jun to 20 Jun)&lt;/h1>
+&lt;h3 id="things-done-2">Things done&lt;/h3>
+&lt;ul>
+&lt;li>Found fix for git-annex-ipfs-remote bug that was causing issues in downloading files onto another machine&lt;/li>
+&lt;li>Presented the DataWallet in the OHBM HackTrack&lt;/li>
+&lt;/ul>
+&lt;h3 id="plan-for-next-week-2">Plan for next week&lt;/h3>
+&lt;ul>
+&lt;li>benchmark upload/download speeds for various files sizes through the ipfs remote using git-annex.&lt;/li>
+&lt;li>make a short demo video documenting every step for setting up the ipfs remote with git-annex&lt;/li>
+&lt;li>work on datalad extension for the IPFS remote&lt;/li>
+&lt;/ul>
+&lt;h3 id="issues-blocking-progress-2">Issues blocking progress&lt;/h3>
 &lt;ul>
 &lt;li>None&lt;/li>
 &lt;/ul></description></item></channel></rss>
