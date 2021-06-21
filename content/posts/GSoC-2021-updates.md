@@ -24,3 +24,16 @@ Weekly reports of my Google Summer of Code 2021 work.
 - Attend OHBM Brainhack and interact with the larger community of neuroscientists and datalad users.
 ### Issues blocking progress
 - None
+
+---
+
+# week 5 (14 Jun to 20 Jun)
+### Things done
+- Found fix for git-annex-ipfs-remote bug that was causing issues in downloading files onto another machine
+- Presented the DataWallet in the OHBM HackTrack
+### Plan for next week
+- benchmark upload/download speeds for various files sizes through the ipfs remote using git-annex.
+- make a short demo video documenting every step for setting up the ipfs remote with git-annex
+- work on datalad extension for the IPFS remote
+### Issues blocking progress
+- None
