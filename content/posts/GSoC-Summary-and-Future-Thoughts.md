@@ -4,7 +4,7 @@ date: 2021-08-22T00:49:02+05:30
 draft: false
 ---
 
-## Why?
+## Motivation
 Modern science is characterized by heavy reliance on empirical data, which has led to a dramatic increase in the creation of data resources. The past few decades have seen major improvements in the ability to share these data resources for collaboration. But the accessibility is far from ideal - data is largely siloed in disconnected warehouses with incompatible interfaces. Interoperability is still just a dream in the minds of most scientists.
 
 Even when the data becomes available, there is usually no version control for informing customers about data updates. This leads to a lot of friction for researchers and peer reviewers and does not allow citizen scientists and hobbyists to even take part.
