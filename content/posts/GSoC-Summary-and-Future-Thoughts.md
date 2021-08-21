@@ -79,12 +79,12 @@ QRI is a protocol for distributed dataset version control and sharing, using IPF
 Dataset search is made easy through qri.cloud - an in-house platform for making datasets public.
 
 ##### Pros:
-Metadata, analyses (transforms), structure (schema) are first class citizens along with the raw data itself, and changes to all of them is tracked in the history.
-Search and discovery made easy through qri.cloud - an aggregation service.
-IPFS is the default storage method. QRI clients embed an IPFS node which runs locally, pinning your datasets.
+- Metadata, analyses (transforms), structure (schema) are first class citizens along with the raw data itself, and changes to all of them is tracked in the history.
+- Search and discovery made easy through qri.cloud - an aggregation service.
+- IPFS is the default storage method. QRI clients embed an IPFS node which runs locally, pinning your datasets.
 ##### Cons:
-Requires data to be in tabular format - this greatly limits the kinds of data we can store
-There seems to be a cap (1GB) on data set sizes that can be published (This limit is only for publishing on their cloud storage, not a protocol limitation)
+- Requires data to be in tabular format - this greatly limits the kinds of data we can store
+- There seems to be a cap (1GB) on data set sizes that can be published (This limit is only for publishing on their cloud storage, not a protocol limitation)
 
 We cannot directly use QRI in its current form, but we can take cues for a more complete system. The concept of transforms is really powerful - the dataset comes with code bound to a dataset, which gets executed whenever there is a new commit to the dataset.
 
