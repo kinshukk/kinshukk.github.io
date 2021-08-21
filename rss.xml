@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Kinshuk's Place</title><link>https://kinshukk.github.io/</link><description>Playing :)</description><generator>Hugo 0.87.0 https://gohugo.io/</generator><language>en</language><managingEditor>kinshukkashyap.me@gnail.com (Kinshuk Kashyap)</managingEditor><webMaster>kinshukkashyap.me@gnail.com (Kinshuk Kashyap)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright><lastBuildDate>Sat, 21 Aug 2021 19:31:39 +0000</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://kinshukk.github.io/rss.xml"/><item><title>GSoC Summary and Future Thoughts</title><link>https://kinshukk.github.io/posts/gsoc-summary-and-future-thoughts/</link><guid isPermaLink="true">https://kinshukk.github.io/posts/gsoc-summary-and-future-thoughts/</guid><pubDate>Sun, 22 Aug 2021 00:49:02 +0530</pubDate><author>kinshukkashyap.me@gnail.com (Kinshuk Kashyap)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright><description>&lt;h2 id="datalad-and-git-annex-with-ipfs-as-remote">Datalad and git-annex with IPFS as remote&lt;/h2>
-&lt;h3 id="why-is-datalad-important">Why is DataLad important?&lt;/h3>
+<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Kinshuk's Place</title><link>https://kinshukk.github.io/</link><description>Playing :)</description><generator>Hugo 0.87.0 https://gohugo.io/</generator><language>en</language><managingEditor>kinshukkashyap.me@gnail.com (Kinshuk Kashyap)</managingEditor><webMaster>kinshukkashyap.me@gnail.com (Kinshuk Kashyap)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright><lastBuildDate>Sat, 21 Aug 2021 19:37:55 +0000</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://kinshukk.github.io/rss.xml"/><item><title>GSoC Summary and Future Thoughts</title><link>https://kinshukk.github.io/posts/gsoc-summary-and-future-thoughts/</link><guid isPermaLink="true">https://kinshukk.github.io/posts/gsoc-summary-and-future-thoughts/</guid><pubDate>Sun, 22 Aug 2021 00:49:02 +0530</pubDate><author>kinshukkashyap.me@gnail.com (Kinshuk Kashyap)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright><description>&lt;h2 id="why">Why?&lt;/h2>
 &lt;p>Modern science is characterized by heavy reliance on empirical data, which has led to a dramatic increase in the creation of data resources. The past few decades have seen major improvements in the ability to share these data resources for collaboration. But the accessibility is far from ideal - data is largely siloed in disconnected warehouses with incompatible interfaces. Interoperability is still just a dream in the minds of most scientists.&lt;/p>
 &lt;p>Even when the data becomes available, there is usually no version control for informing customers about data updates. This leads to a lot of friction for researchers and peer reviewers and does not allow citizen scientists and hobbyists to even take part.&lt;/p>
 &lt;p>Traditional storage providers have several inherent issues:&lt;/p>
@@ -9,11 +8,8 @@
 &lt;li>Further, several simultaneous downloads lead to bandwidth limits, making
 downloads of large datasets time-consuming, expensive, and ultimately impractical.&lt;/li>
 &lt;/ul>
-&lt;p>The Interplanetary File System (IPFS) protocol is an emerging web standard that offers a unified
-open-source service for peer-to-peer sharing of datasets. On IPFS, multiple peers may share
-components of a dataset simultaneously, offering greater bandwidth. Data is immutable, and
-easily verifiable by checking the hash of the Merkle root. This enables provenance tracking of datasets, verification of authenticity, the potential for open access, and a tool against
-Censorship, and towards open access.&lt;/p>
+&lt;p>The Interplanetary File System (IPFS) protocol is an emerging web standard that offers a unified open-source service for peer-to-peer sharing of datasets. On IPFS, multiple peers may share components of a dataset simultaneously, offering greater bandwidth. Data is immutable, and easily verifiable by checking the hash of the Merkle root. This enables provenance tracking of datasets, verification of authenticity, the potential for open access, and a tool against censorship, and towards open access.&lt;/p>
+&lt;h3 id="why-is-datalad-important">Why is DataLad important?&lt;/h3>
 &lt;p>The datalad utility enables data sharing and collaboration by providing uniform access to available data, independent of storage providers or authentication schemes. It pairs this with reliable versioning using git-annex, which allows obtaining file contents upon request.&lt;/p>
 &lt;h3 id="ipfs-remote-for-git-annex-and-datalad">IPFS remote for git-annex and datalad&lt;/h3>
 &lt;p>In order to use IPFS for git-annex storage, we need a script for a special remote that git-annex can communicate with. There was a pre-existing bash script for this, but there were problems getting it to run - once you add files to an annex on one machine, they just didn’t show up in the same repository on another machine. As part of my GSoC work, I investigated this issue.&lt;/p>
@@ -32,10 +28,13 @@ Censorship, and towards open access.&lt;/p>
 &lt;hr>
 &lt;h2 id="opsci-data-wallet">Opsci Data Wallet&lt;/h2>
 &lt;p>In my original GSoC proposal, I had outlined an application for storage of large neuroimaging datasets. As the weeks passed, the entire Opscientia team iterated on the idea, and we decided to build a prototype so that we can gather feedback from peers.&lt;/p>
-&lt;p>The data wallet that we ended up implementing is a web application that has the following features:
-Simple user login using an Ethereum wallet (Metamask)
-Drag-and-drop file upload to IPFS storage, through Textile.io bucket API
-Scientific kudos using POAP (Proof Of Attendance Protocol)&lt;/p>
+&lt;p>The data wallet that we ended up implementing is a web application that has the following features:&lt;/p>
+&lt;ul>
+&lt;li>Simple user login using an Ethereum wallet (Metamask)&lt;/li>
+&lt;li>Drag-and-drop file upload to IPFS storage, through Textile.io bucket API&lt;/li>
+&lt;li>Scientific kudos using POAP (Proof Of Attendance Protocol)&lt;/li>
+&lt;/ul>
+&lt;p>Relevant Links:&lt;/p>
 &lt;ul>
 &lt;li>&lt;a href="https://github.com/opscientia/web3weekend-hackathon">Github repository&lt;/a>&lt;/li>
 &lt;li>&lt;a href="https://www.youtube.com/watch?v=LquRin_Dve4">Demo Video&lt;/a>&lt;/li>
