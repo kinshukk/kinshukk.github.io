@@ -4,23 +4,20 @@ date: 2021-08-22T00:49:02+05:30
 draft: false
 ---
 
-## Datalad and git-annex with IPFS as remote
-### Why is DataLad important?
-Modern science is characterized by heavy reliance on empirical data, which has led to a dramatic increase in the creation of data resources. The past few decades have seen major improvements in the ability to share these data resources for collaboration. But the accessibility is far from ideal - data is largely siloed in disconnected warehouses with incompatible interfaces. Interoperability is still just a dream in the minds of most scientists. 
+## Why?
+Modern science is characterized by heavy reliance on empirical data, which has led to a dramatic increase in the creation of data resources. The past few decades have seen major improvements in the ability to share these data resources for collaboration. But the accessibility is far from ideal - data is largely siloed in disconnected warehouses with incompatible interfaces. Interoperability is still just a dream in the minds of most scientists.
 
 Even when the data becomes available, there is usually no version control for informing customers about data updates. This leads to a lot of friction for researchers and peer reviewers and does not allow citizen scientists and hobbyists to even take part.
 
-Traditional storage providers have several inherent issues: 
+Traditional storage providers have several inherent issues:
 - They are monolithic and expensive solutions that may act as a single point of failure
 - This monolithic property also allows easy censoring (location-based or otherwise)
 - Further, several simultaneous downloads lead to bandwidth limits, making
 downloads of large datasets time-consuming, expensive, and ultimately impractical.
 
-The Interplanetary File System (IPFS) protocol is an emerging web standard that offers a unified
-open-source service for peer-to-peer sharing of datasets. On IPFS, multiple peers may share
-components of a dataset simultaneously, offering greater bandwidth. Data is immutable, and
-easily verifiable by checking the hash of the Merkle root. This enables provenance tracking of datasets, verification of authenticity, the potential for open access, and a tool against
-Censorship, and towards open access.
+The Interplanetary File System (IPFS) protocol is an emerging web standard that offers a unified open-source service for peer-to-peer sharing of datasets. On IPFS, multiple peers may share components of a dataset simultaneously, offering greater bandwidth. Data is immutable, and easily verifiable by checking the hash of the Merkle root. This enables provenance tracking of datasets, verification of authenticity, the potential for open access, and a tool against censorship, and towards open access.
+
+### Why is DataLad important?
 
 The datalad utility enables data sharing and collaboration by providing uniform access to available data, independent of storage providers or authentication schemes. It pairs this with reliable versioning using git-annex, which allows obtaining file contents upon request.
 
@@ -34,7 +31,7 @@ Steps to set up git-annex with IPFS remote:
 - [Demo video](https://www.youtube.com/watch?v=2JV8ZpiIntY)
 - [Pull Request](https://github.com/opscientia/brainhack2020_DeSci/pull/1)
 
-Once the special remote for git-annex works, integration with datalad is simple. We just need to specify the remote to be used before we want to upload to IPFS. 
+Once the special remote for git-annex works, integration with datalad is simple. We just need to specify the remote to be used before we want to upload to IPFS.
 
 - [Document showing detailed steps](https://github.com/kinshukk/brainhack2020_DeSci/blob/main/README_datalad.md)
 - [Demo video](https://www.youtube.com/watch?v=3WDMfnEFMoA)
@@ -45,10 +42,11 @@ Once the special remote for git-annex works, integration with datalad is simple.
 In my original GSoC proposal, I had outlined an application for storage of large neuroimaging datasets. As the weeks passed, the entire Opscientia team iterated on the idea, and we decided to build a prototype so that we can gather feedback from peers.
 
 The data wallet that we ended up implementing is a web application that has the following features:
-Simple user login using an Ethereum wallet (Metamask)
-Drag-and-drop file upload to IPFS storage, through Textile.io bucket API
-Scientific kudos using POAP (Proof Of Attendance Protocol)
+- Simple user login using an Ethereum wallet (Metamask)
+- Drag-and-drop file upload to IPFS storage, through Textile.io bucket API
+- Scientific kudos using POAP (Proof Of Attendance Protocol)
 
+Relevant Links:
 - [Github repository](https://github.com/opscientia/web3weekend-hackathon)
 - [Demo Video](https://www.youtube.com/watch?v=LquRin_Dve4)
 - [My commits](https://github.com/opscientia/web3weekend-hackathon/commits?author=kinshukk)
@@ -76,9 +74,9 @@ The long term aim is to make a composable building block that is easy to integra
 ---
 
 ### QRI as a datalad alternative
-QRI is a protocol for distributed dataset version control and sharing, using IPFS as the main storage layer. In QRI, raw data (assumed to be structured in tabular form - csv, json, xml, cbor) is combined with metadata, transforms, and version history of all changes to form a QRI dataset. 
+QRI is a protocol for distributed dataset version control and sharing, using IPFS as the main storage layer. In QRI, raw data (assumed to be structured in tabular form - csv, json, xml, cbor) is combined with metadata, transforms, and version history of all changes to form a QRI dataset.
 
-Dataset search is made easy through qri.cloud - an in-house platform for making datasets public. 
+Dataset search is made easy through qri.cloud - an in-house platform for making datasets public.
 
 ##### Pros:
 Metadata, analyses (transforms), structure (schema) are first class citizens along with the raw data itself, and changes to all of them is tracked in the history.
