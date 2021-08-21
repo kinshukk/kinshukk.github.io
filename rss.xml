@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Kinshuk's Place</title><link>https://kinshukk.github.io/</link><description>Playing :)</description><generator>Hugo 0.87.0 https://gohugo.io/</generator><language>en</language><managingEditor>kinshukkashyap.me@gnail.com (Kinshuk Kashyap)</managingEditor><webMaster>kinshukkashyap.me@gnail.com (Kinshuk Kashyap)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright><lastBuildDate>Sat, 21 Aug 2021 19:37:55 +0000</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://kinshukk.github.io/rss.xml"/><item><title>GSoC Summary and Future Thoughts</title><link>https://kinshukk.github.io/posts/gsoc-summary-and-future-thoughts/</link><guid isPermaLink="true">https://kinshukk.github.io/posts/gsoc-summary-and-future-thoughts/</guid><pubDate>Sun, 22 Aug 2021 00:49:02 +0530</pubDate><author>kinshukkashyap.me@gnail.com (Kinshuk Kashyap)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright><description>&lt;h2 id="why">Why?&lt;/h2>
+<?xml version="1.0" encoding="utf-8"?><rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title>Kinshuk's Place</title><link>https://kinshukk.github.io/</link><description>Playing :)</description><generator>Hugo 0.87.0 https://gohugo.io/</generator><language>en</language><managingEditor>kinshukkashyap.me@gnail.com (Kinshuk Kashyap)</managingEditor><webMaster>kinshukkashyap.me@gnail.com (Kinshuk Kashyap)</webMaster><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright><lastBuildDate>Sat, 21 Aug 2021 20:09:51 +0000</lastBuildDate><atom:link rel="self" type="application/rss+xml" href="https://kinshukk.github.io/rss.xml"/><item><title>GSoC Summary and Future Thoughts</title><link>https://kinshukk.github.io/posts/gsoc-summary-and-future-thoughts/</link><guid isPermaLink="true">https://kinshukk.github.io/posts/gsoc-summary-and-future-thoughts/</guid><pubDate>Sun, 22 Aug 2021 00:49:02 +0530</pubDate><author>kinshukkashyap.me@gnail.com (Kinshuk Kashyap)</author><copyright>[CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/deed.en)</copyright><description>&lt;h2 id="why">Why?&lt;/h2>
 &lt;p>Modern science is characterized by heavy reliance on empirical data, which has led to a dramatic increase in the creation of data resources. The past few decades have seen major improvements in the ability to share these data resources for collaboration. But the accessibility is far from ideal - data is largely siloed in disconnected warehouses with incompatible interfaces. Interoperability is still just a dream in the minds of most scientists.&lt;/p>
 &lt;p>Even when the data becomes available, there is usually no version control for informing customers about data updates. This leads to a lot of friction for researchers and peer reviewers and does not allow citizen scientists and hobbyists to even take part.&lt;/p>
 &lt;p>Traditional storage providers have several inherent issues:&lt;/p>
@@ -60,12 +60,16 @@ downloads of large datasets time-consuming, expensive, and ultimately impractica
 &lt;p>QRI is a protocol for distributed dataset version control and sharing, using IPFS as the main storage layer. In QRI, raw data (assumed to be structured in tabular form - csv, json, xml, cbor) is combined with metadata, transforms, and version history of all changes to form a QRI dataset.&lt;/p>
 &lt;p>Dataset search is made easy through qri.cloud - an in-house platform for making datasets public.&lt;/p>
 &lt;h5 id="pros">Pros:&lt;/h5>
-&lt;p>Metadata, analyses (transforms), structure (schema) are first class citizens along with the raw data itself, and changes to all of them is tracked in the history.
-Search and discovery made easy through qri.cloud - an aggregation service.
-IPFS is the default storage method. QRI clients embed an IPFS node which runs locally, pinning your datasets.&lt;/p>
+&lt;ul>
+&lt;li>Metadata, analyses (transforms), structure (schema) are first class citizens along with the raw data itself, and changes to all of them is tracked in the history.&lt;/li>
+&lt;li>Search and discovery made easy through qri.cloud - an aggregation service.&lt;/li>
+&lt;li>IPFS is the default storage method. QRI clients embed an IPFS node which runs locally, pinning your datasets.&lt;/li>
+&lt;/ul>
 &lt;h5 id="cons">Cons:&lt;/h5>
-&lt;p>Requires data to be in tabular format - this greatly limits the kinds of data we can store
-There seems to be a cap (1GB) on data set sizes that can be published (This limit is only for publishing on their cloud storage, not a protocol limitation)&lt;/p>
+&lt;ul>
+&lt;li>Requires data to be in tabular format - this greatly limits the kinds of data we can store&lt;/li>
+&lt;li>There seems to be a cap (1GB) on data set sizes that can be published (This limit is only for publishing on their cloud storage, not a protocol limitation)&lt;/li>
+&lt;/ul>
 &lt;p>We cannot directly use QRI in its current form, but we can take cues for a more complete system. The concept of transforms is really powerful - the dataset comes with code bound to a dataset, which gets executed whenever there is a new commit to the dataset.&lt;/p>
 &lt;hr>
 &lt;h2 id="to-conclude">To Conclude&lt;/h2>
