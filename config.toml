@@ -207,6 +207,13 @@ uglyURLs = false
         weight = 2
         pre = "internal"
         post = "archive"
+
+    [[menu.main]]
+        url = "/labyrinths/"
+        name = "Labyrinths"
+        weight = 3
+        pre = "internal"
+        post = "archive"
     # [[menu.main]]
     #     url = "/categories/"
     #     name = "Categories"
